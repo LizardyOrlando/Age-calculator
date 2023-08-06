@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <!-- <meta charset="UTF-8"> -->
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
-  <title>Results summary component</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <title>Age calculator app</title>
 </head>
 <body>
-  <div class="contain">
-    <div class="section-1">
-      <h5 class="paragraph">Your Result</h5>
-      <div class="circle">
-        <h1 class="title">76</h1>
-        <p class="paragraph-circle">of 100</p>
-      </div>
-      <h3 class="title">Great</h3>
-      <p class="paragraph end">
-        You scored higher than 65% of the people who have taken these tests.
-      </p>
+  <div class="calculator-container">
+    <div class="labels">
+      <label for="day">DAY</label>
+      <label for="month">MONTH</label>
+      <label for="year">YEAR</label>
     </div>
-    <div class="section-2">
-      <h5 class="summary-title">Summary</h5>
-      <div class="reaction"><img src="./assets/images/icon-reaction.svg" alt="reaction-icon">Reaction <p class="results">80</p></div>
-      <div class="memory"><img src="./assets/images/icon-memory.svg" alt="memory-icon">Memory <p class="results">92</p></div>
-      <div class="verbal"><img src="./assets/images/icon-verbal.svg" alt="verbal-icon">Verbal <p class="results">61</p></div>
-      <div class="visual"><img src="./assets/images/icon-visual.svg" alt="visual-icon">Visual <p class="results">72</p></div>
-      <button>Continue</button>
+    <div class="inputs">
+      <input type="number" name="day-tag" id="day" placeholder="DD" min="1" max="31">
+      <input type="number" name="month-tag" id="month" placeholder="MM" min="1" max="12">
+      <input type="number" name="year-tag" id="year" placeholder="YYYY" min="1900" max="2099">
+    </div>
+    <div class="invalid">
+      <p id="invalid-day" class="invalid-res"></p>
+      <p id="invalid-month" class="invalid-res"></p>
+      <p id="invalid-year" class="invalid-res"></p>
+    </div>
+    <div class="arrow-img">
+      <div class="line">
+        <img src="./assets/images/icon-arrow.svg" alt="arrow-down" id="img-button">
+      </div>
+    </div>
+    <div class="date">
+      <div class="show year">
+        <h1 id="date-year">--</h1>
+        <h1 class="title">years</h1>
+      </div>
+      <div class="show month">
+        <h1 id="date-month">--</h1>
+        <h1 class="title">months</h1>
+      </div>
+      <div class="show day">
+        <h1 id="date-day">--</h1>
+        <h1 class="title">days</h1>
+      </div>
     </div>
   </div>
 </body>
+<script src="ageCalculator.js"></script>
 </html>
